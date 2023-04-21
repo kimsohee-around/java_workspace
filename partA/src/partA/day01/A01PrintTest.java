@@ -1,6 +1,10 @@
 package partA.day01;
 //패키지 이름은 com.naver.api 과 같은 도메인주소 형식입니다.
-
+/*
+ * 복습 : 1. 출력문 System.out.println  2. 사용자정의한 메소드 aboutClass,aboutSystem
+ *       3. 문자열은 일반적으로 문장을 말합니다."(큰 따옴표) 안에 작성. 큰 따옴표 출력하고 싶으면 \(역슬래쉬)와 같이 사용 
+ *       4. 역슬래쉬와 같이 쓰는 문자 - 이스케이프 문자. \n , \t , \" 등등
+ */
 
 //보라색은 예약어(키워드)
 public class A01PrintTest {		//개발자가 만든 클래스

@@ -1,15 +1,26 @@
 2주차 진도 계획
 	- 반복문(for,while)
-	- 메소드
+	- 메소드*****
 	- String 문자열
 	- 배열
 	- 자바클래스의 메소드
 	
 day 04
 
+A13IfElseIfTest
+- if ~ else if ~ else if ~ ...
 
+A14LogicalNot
+- 논리 Not 연산. 연산기호 !
 
+A15SwitchTest
+- switch
 
+A16ForBasic
+- for 기본
+
+A18ForInFor
+- 이중 for
 
 *과제 : 1~n 까지의 합계를 for문으로 구해보세요.(n은 사용자가 입력합니다.)  SumToN.java
       

@@ -20,6 +20,8 @@ public class A01PrintTest {		//개발자가 만든 클래스
 		System.out.println("=== 메소드로 만들면 코드 재사용이 됩니다. ===");
 		aboutClass();
 		aboutSystem();
+		System.out.println(Math.rint(4.5));
+		System.out.println(Math.round(4.5));
 	}
 
 	public static void aboutClass() {       // aboutClass 이라는 이름의 메소드 정의 : 개발자가 정한 이름

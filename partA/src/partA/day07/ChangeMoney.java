@@ -23,10 +23,6 @@ public class ChangeMoney {
 	}
 	
 	
-	
-	
-	
-	
 	public static double yenToWon(int yen, double oneYenWon) {
 		System.out.println("환전할 금액 = " + yen +"￥, 1엔 환율 = " + oneYenWon + "￦");
 		double temp = yen*oneYenWon;

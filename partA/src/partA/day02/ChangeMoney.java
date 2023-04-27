@@ -4,8 +4,8 @@ package partA.day02;
 /* ChangeMoney.java - 작성자 : 박현성
  여행을 가려면 환전을 해야합니다.
  활용 : 변수, 연산, 캐스팅(수업내용 범위 안에서 하세요.)
- 일본 : 원화 -> 엔화
- 미국 : 원화 -> 달러화
+ 일본 : 원화 -> 엔화     wonToYen  , yenToWon 메소드 만들기
+ 미국 : 원화 -> 달러화	  wonToDollar , dollarToWon 만들기
   
  1엔 = ?원
  1달러 = ?원

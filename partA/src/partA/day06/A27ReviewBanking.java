@@ -45,12 +45,13 @@ public class A27ReviewBanking {
 					break;
 
 				default:		//1~4 이외의 menu 값일때
+					System.out.println("잘못된 menu 값 입니다.1~4 선택하세요.");
 					break;
 			} //switch end
 	
 		
 		}//while end
-		
+		sc.close();
 		
 	}//main end
 

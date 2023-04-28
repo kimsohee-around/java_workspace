@@ -2,7 +2,7 @@ package partA.day07;
 
 import java.util.Scanner;
 
-public class A29StringTest1 {
+public class A29StringMethod1 {
 
 	public static void main(String[] args) {
 		//문자열 데이터를 위한 변수 선언 : 참조타입
@@ -45,14 +45,15 @@ public class A29StringTest1 {
 		//참고 : 아래와 같은 원시타입 age 는 메소드가 없습니다.
 		//int age = 23;
 		System.out.println("4.문자열의 특정 위치의 문자 1개를 가져오기 - charAt");
+		//인자는 int 1개, 리턴 타입은 char 
 		int i=0;	//문자열의 첫번째 문자 위치는 0 으로 시작을 합니다.위치는 index 라고 합니다.
-		System.out.println("name.charAt(0) = " + name.charAt(i));		//i=0
+		System.out.println("name.charAt(0) = " + name.charAt(i));		//i=0 , 리턴 'm'
 		i++;
-		System.out.println("name.charAt(1) = " + name.charAt(i));		//i=1
+		System.out.println("name.charAt(1) = " + name.charAt(i));		//i=1 , 리턴 'o'
 		i++;
-		System.out.println("name.charAt(2) = " + name.charAt(i));		//i=2
+		System.out.println("name.charAt(2) = " + name.charAt(i));		//i=2 , 리턴 'm'
 		i++;
-		System.out.println("name.charAt(3) = " + name.charAt(i));		//i=3
+		System.out.println("name.charAt(3) = " + name.charAt(i));		//i=3 , 리턴 'o'
 		
 		
 	}

@@ -2,7 +2,7 @@ package partA.day07;
 
 import java.util.Scanner;
 
-public class A30StringTest2 {
+public class A30StringTest {
 	//A29 클래스에서 연습한 String 메소드 활용해 보기
 	public static void main(String[] args) {
 		

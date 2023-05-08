@@ -6,12 +6,17 @@ package partB.day12;
 public class MyIntegerValue {
 
 		//1)클래스의 특성 즉 인스턴스 필드 선언
-		int value1;
+		int value1;				//default 또는 package 접근 한정
 		int value2;
 		
 		//3) private 변수 선언과 테스트
 		private String name;
 		private int test;
+		
+		//4) public 변수 선언과 전역변수 기본값 테스트
+		public String message;
+		public int result;
+		public boolean isOk;
 		
 		//private 변수값 저장할 메소드
 		public void name(String name) {
@@ -24,7 +29,9 @@ public class MyIntegerValue {
 		
 		// private 변수값 출력할 메소드
 		public void printName() {
+			int count;		//4) 번과 비교. 지역변수는 초기값 꼭 필요
 			System.out.println("이 객체의 name = " + name);
+//			System.out.println(count);  //오류 : 초기화 없음.
 		}
 		
 		//private test 의 메소드

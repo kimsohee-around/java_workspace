@@ -1,5 +1,7 @@
 package partA.day06;
 
+import java.util.Random;
+
 //메소드 형식 연습 : 자바의 Math 클래스를 예시로 합니다.
 public class A25MathTest {
 

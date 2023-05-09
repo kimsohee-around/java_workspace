@@ -7,5 +7,15 @@ public class B06ProductTest {
 		System.out.println(tv.product());
 		
 		Product audio = new Product("LG블루트스 오디오");
+		System.out.println(audio.product());
+		
+		Product notebook = new Product(76763434, "LG그램", 2200000, "LG");
+		System.out.println(notebook.product());
+		
+		Product snack = new Product(5500, "오리온");
+		System.out.println(snack.product());
+		
+		Product pizza = new Product("도미노스테이크피자", 32000, "도미노");
+		System.out.println(pizza.product());
 	}
 }

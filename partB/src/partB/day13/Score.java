@@ -1,6 +1,6 @@
-package partB.day12;
+package partB.day13;
 
-//sum() , average() 메소드는 인스턴스 필드로 계산(처리)한 결과를 리턴하는 인스턴스 메소드
+//day12 Score 클래스로 생성자 동작 확인. 기본생성자 동작 여부를 day12의 Score클래스와 비교하는 것이 핵심.
 public class Score {
 	
 	private String name;
@@ -8,9 +8,16 @@ public class Score {
 	private int english;
 	private int science;
 	
-	//생성자를 day13에서 배우고나서 보니 , 여기는 기본 생성자가 생략된 상태로 
-	// 객체 생성시에는 기본생성자만 실행이 가능합니다.
-	
+//매개변수가 있는 생성자를 만들었다면(오버로딩), 기본생성자 사용하고 싶을때 꼭 정의를 해야합니다.
+// 이 Score 클래스는 기본 생성자로 객체를 생성할 수 없습니다.
+	public Score(String name, int korea, int english, int science) {
+		//this();			//오류:기본생성자가 없다.
+		this.name = name;
+		this.korea = korea;
+		this.english = english;
+		this.science = science;
+	}
+
 	//인스턴스 메소드로 만듭니다.
 	public int sum() {
 		return korea+english+science;

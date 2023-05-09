@@ -8,6 +8,8 @@ public class Score {
 	private int english;
 	private int science;
 	
+
+	
 	//인스턴스 메소드로 만듭니다.
 	public int sum() {
 		return korea+english+science;

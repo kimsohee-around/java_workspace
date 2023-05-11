@@ -15,6 +15,7 @@ public abstract class AShape {
 	}
 	
 	public AShape(String shapeName) {
+		System.out.println("추상클래스 AShape의 커스텀 생성자 실행완료!");
 		this.shapeName=shapeName;
 	}
 	

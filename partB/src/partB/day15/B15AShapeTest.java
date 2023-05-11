@@ -1,5 +1,7 @@
 package partB.day15;
 
+import java.util.ArrayList;
+
 public class B15AShapeTest {
 
 	public static void main(String[] args) {
@@ -69,6 +71,33 @@ public class B15AShapeTest {
 			System.out.println("넓이=" + s.area());
 		}	
 		
+		System.out.println("\ninstanceof 복습문제");
+		//instanceof 복습문제
+		//shapes 배열의 객체들을 하나씩 검사하여 
+		//1)OLadderShape 객체인 경우 iamLadder() 메소드 실행하세요. index를 사용하는 for문 사용.
+		for(int i=0;i<shapes.length;i++) {
+			if(shapes[i] instanceof OLadderShape) {
+				OLadderShape temp = (OLadderShape) shapes[i];
+				temp.iamLadder();
+			}
+		}
+		System.out.println("=======0번 인덱스 객체 바꾸기=============");
+		shapes[0] = new OCircle();      
+		System.out.println("======================================");
+		//2)OCircle 객체인 경우 iamCircle() 메소드를 실행하세요. 향상for문 사용합시다.
+		for(AShape s : shapes) {
+			if(s instanceof OCircle) {
+				OCircle temp = (OCircle) s;
+				temp.iamCircle();
+			}
+		} 
+		
+		
+		
+		
 		
 	}
 }
+
+
+

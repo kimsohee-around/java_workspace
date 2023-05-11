@@ -27,5 +27,12 @@ public abstract class AShape {
 	public void aShape() {
 		System.out.println("추상클래스 AShape의 인스턴스 메소드 실행!!");
 	}
+
+	@Override
+	public String toString() {
+		return "AShape [도형이름=" + shapeName + ", 너비=" + width + ", 높이=" + height + "]";
+	}
+	
+	
 	
 }

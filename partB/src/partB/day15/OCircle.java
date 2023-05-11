@@ -11,12 +11,12 @@ public class OCircle extends AShape{
 	public void setRadius(double radius) { 	this.radius = radius; 	}
 
 	public OCircle() {
-		System.out.println("자식 클래스 OCircle 생성자 실행완료!!");
+		System.out.println("자식 클래스 OCircle 기본 생성자 실행완료!!");
 	}
 	
 	public OCircle(double radius) {
 		//super();		//원 크기의 근접한 값으로 너비,높이	
-		System.out.println("자식 클래스 OCircle 생성자 실행완료!!");
+		System.out.println("자식 클래스 OCircle 커스텀 생성자 실행완료!!");
 		this.radius = radius;
 	}
 	

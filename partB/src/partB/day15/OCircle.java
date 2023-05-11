@@ -11,14 +11,17 @@ public class OCircle extends AShape{
 	public void setRadius(double radius) { 	this.radius = radius; 	}
 
 	public OCircle() {
+		super();
 		System.out.println("자식 클래스 OCircle 기본 생성자 실행완료!!");
 	}
 	
 	public OCircle(double radius) {
-		//super();		//원 크기의 근접한 값으로 너비,높이	
+		//super();		//1)부모클래스 기본생성자 호출은 생략 가능.
+		super("기본모양의 원");    //2) 부모클래스 커스텀 생성자 호출.  1) 또는 2) 각각 테스트 해보세요.
 		System.out.println("자식 클래스 OCircle 커스텀 생성자 실행완료!!");
 		this.radius = radius;
 	}
+	
 	
 	public void iamCircle() {
 		System.out.println("I am Circle. -" + super.shapeName);

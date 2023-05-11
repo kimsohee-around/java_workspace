@@ -12,6 +12,12 @@ public class LadderShape extends Shape {
 		this.bottomLength = bottomLength;
 	}
 	
+	//day15에 추가. 자식 LadderShaper의 인스턴스 메소드
+	public void iamLadder() {
+		System.out.println("I am Ladder. -" + super.getShapeName());
+		System.out.println("윗변=" + topLength + ",아랫변=" + bottomLength);
+	}
+	
 	//사다리꼴 넓이 구하는 공식으로 메소드 재정의 해보세요.(윗변+아랫변)*높이/2
 	@Override
 	public int area() {

@@ -14,6 +14,12 @@ public class Circle extends Shape{
 		this.radius = radius;
 	}
 	
+	//day15에 추가. 자식 Circle의 인스턴스 메소드
+	public void iamCircle() {
+		System.out.println("I am Circle. -" + super.getShapeName());
+		System.out.println("반지름=" + radius);
+	}
+	
 	@Override
 	public int area() {
 		return (int)(Math.PI * radius * radius);		

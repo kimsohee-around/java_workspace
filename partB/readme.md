@@ -40,6 +40,37 @@
 #### B08StringConstructor.java
 + 자바 라이브러리의 String 클래스 생성자들 테스트 하기.
 
+<hr/>
+
+#### B11ScoreArrays.java
++ 5.9 과제 : Score 객체 배열(*객체 참조값*)에 저장하는 연습
++ Score[] students = new Score[7];
+   + students 배열의 저장되는 참조값은 Score 객체를 참조하는 값이다. 다른 객체를 참조할 수 없습니다. 예를들면 User 객체는 참조할 수 없는 배열입니다. 
+   + *이 명령은 Score 객체 7개를 참조할 수 있는 배열을 선언합니다. *
+   
+   
+#### B12ClassAFamily.java
++ Class A.java 의 자식클래스를 생성해서 테스트 
+ + 자식 클래스 partB.day14.ClassAA.java 
+ + 자식 클래스 partB.day14.test.ClassAB.java 는 protected 테스트 
++ partB.day14.test.B12ClassAFamily.java 에서 접근 한정자 public private, default , protected 테스트 
+ 
+#### B13ShapeTest.java 
+ +상속 예시
+    + Shape 부모 클래스 
+    + triangle Circle LadderShape 자식 클래스 
+ + 상속의 특징 
+    + 자식 객체 생성할 떄, 부모 생성자 먼저 실행 후 자식 생성자 실행. - 부모 생성자에서 사용가능 한것을 호출 호출하지 않으면 오류 
+    + 자식 클래스는 부모 의 메소드를 재 정의(overriding)할 수 있다. @Override 로 표시.(@는 애노테이션)
+ 
+ ![v2](./src/partB/day14/상속v2.png)
+    
+ <hr/>
+ 
+#### day15(5.12)
++ 형변환(Casting)
+    + 기본자료형끼리 변환 : int,double,char,..., 자동형변환/ 강제형변환(명시적형변환)
+    + 클래스 타입의 자료형 변환 : 상속관계에서 부모와 자식클래스 사이의 형변환, 
      
      
      

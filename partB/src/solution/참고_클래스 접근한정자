@@ -1,0 +1,7 @@
+Bike.java 소스 파일에
+
+public class Bike{     }
+class Electronics{     }
+
+- public 클래스는 소스파일명과 같아야 합니다.
+- public 이 없는 Electronics 는 접근권한이 default 

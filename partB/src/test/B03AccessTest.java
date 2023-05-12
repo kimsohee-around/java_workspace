@@ -1,6 +1,7 @@
 package test;
 
 import partB.day12.MyIntegerValue;
+import solution.Bike;
 
 public class B03AccessTest {
 
@@ -14,6 +15,10 @@ public class B03AccessTest {
 		System.out.println("my.message 값 대입 후 = " + my.message);
 		System.out.println(my.result);
 		System.out.println(my.isOk);
+		
+		System.out.println("\nsolution 패키지 클래스 테스트");
+		Bike bike = new Bike();
+//		Electronics electron = new Electronics();  //오류: 접근한정자 default 인 클래스
 	}
 
 }

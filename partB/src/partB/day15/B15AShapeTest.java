@@ -1,7 +1,5 @@
 package partB.day15;
 
-import java.util.ArrayList;
-
 public class B15AShapeTest {
 
 	public static void main(String[] args) {
@@ -9,6 +7,7 @@ public class B15AShapeTest {
 		
 		AShape otri = new OTriangle();
 		System.out.println("============================");
+		
 		/*
 		추상클래스 AShape의 기본 생성자 실행완료!
 		자식클래스 OTrinangle의 기본 생성자 실행완료!

@@ -41,6 +41,7 @@
 + 자바 라이브러리의 String 클래스 생성자들 테스트 하기.
 
 <hr/>
+### day14 (5.10)
 
 #### B11ScoreArrays.java
 + 5.9 과제 : Score 객체 배열(*객체 참조값*)에 저장하는 연습
@@ -67,7 +68,7 @@
     
  <hr/>
  
-#### day15(5.12)
+#### day15(5.11)
 
 #### B14ShapeV2Test.java
 
@@ -76,8 +77,9 @@
      + 클래스 타입의 자료형 변환 : 상속관계에서 부모와 자식클래스 사이의 형변환, 
 + UpCasting : 부모 타입 변수에 자식 객체 대입하기    (자동 캐스팅)
 + DownCasting : 업캐스팅 했던 객체를 다시 자신(자식 클래스) 타입 변수로 참조 시킬때
-+ 다운 캐스팅 할때에는 instanceof 연산으로 타입체크를 꼭 하고, 결과가 참일때만 실행하도록 합니다. sh instanceof Circle 는 sh 참조객체는 new Circle(~~) 생성자로 생성된 것?
-sh instanceof Circle 결과가 참일 때만 Circle 로 다운캐스팅 합니다. 그렇지 않으면 오류.
++ 다운 캐스팅 할때에는 instanceof 연산으로 타입체크를 꼭 하고, 결과가 참일때만 실행하도록 합니다. 
++ sh instanceof Circle 에서 sh 참조객체는 new Circle(~) 생성자로 생성된 것인지 검사합니다.
+sh instanceof Circle 결과가 참일 때만 Circle 로 다운캐스팅 합니다. 그렇지 않으면 오류 발생.
 
 #### AShape.java
 + 추상클래스로 선언.추상 클래스는 직접 객체 생성 안함.
@@ -87,6 +89,9 @@ sh instanceof Circle 결과가 참일 때만 Circle 로 다운캐스팅 합니�
 
 #### B15AShapeTest.java
 + AShape 배열을 생성해서 구현체를 참조시키고, 업캐스팅/다운캐스팅 연습.
+
+<hr/>
+### day16 (5.12)
 
 ### 참고 1. 상속의 효과(장점)
 + 반복된 코드 작성을 줄일 수 있습니다.(코드 재사용성 증가)
@@ -107,6 +112,13 @@ sh instanceof Circle 결과가 참일 때만 Circle 로 다운캐스팅 합니�
 + 상속은 n차 상속이 가능합니다. n차 상속에서 가장 꼭대기에 있는 클래스 Object 클래스
 + Object 클래스의 메소드는 모든 객체가 상속 받습니다. 
   toString() 재정의를 했던 것은 Object 의 메소드 입니다. 
+  
+#### B16ObjectTypeTest.java
+  
+#### solution 패키지 
+  + Product 추상클래스를 이용한 복습 문제
+  
+#### B17ArrayListTest.java
 
 
 

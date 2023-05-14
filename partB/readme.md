@@ -41,6 +41,7 @@
 + 자바 라이브러리의 String 클래스 생성자들 테스트 하기.
 
 <hr/>
+
 ### day14 (5.10)
 
 #### B11ScoreArrays.java
@@ -91,6 +92,7 @@ sh instanceof Circle 결과가 참일 때만 Circle 로 다운캐스팅 합니�
 + AShape 배열을 생성해서 구현체를 참조시키고, 업캐스팅/다운캐스팅 연습.
 
 <hr/>
+
 ### day16 (5.12)
 
 ### 참고 1. 상속의 효과(장점)
@@ -113,6 +115,8 @@ sh instanceof Circle 결과가 참일 때만 Circle 로 다운캐스팅 합니�
 + Object 클래스의 메소드는 모든 객체가 상속 받습니다. 
   toString() 재정의를 했던 것은 Object 의 메소드 입니다. 
   
+<hr/>
+
 #### B16ObjectTypeTest.java
   
 #### solution 패키지 

@@ -1,4 +1,4 @@
-package partC.day17;
+package partC.day17.beable;
 
 public interface Cookable extends BeAble{
 

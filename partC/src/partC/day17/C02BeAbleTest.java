@@ -1,5 +1,11 @@
 package partC.day17;
 
+import partC.day17.beable.AI;
+import partC.day17.beable.Dog;
+import partC.day17.beable.Human;
+import partC.day17.beable.Runnable;
+import partC.day17.beable.Thinkable;
+
 public class C02BeAbleTest {
 
 	public static void main(String[] args) {

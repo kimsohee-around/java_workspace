@@ -1,4 +1,4 @@
-package partC.day17;
+package partC.day17.beable;
 
 public class Human implements Thinkable, Cookable, Runnable{
 	//부모 인터페이스의 추상메소도 정의하기

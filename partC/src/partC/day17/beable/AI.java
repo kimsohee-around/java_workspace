@@ -1,4 +1,4 @@
-package partC.day17;
+package partC.day17.beable;
 
 public class AI implements Thinkable{
 	

@@ -3,6 +3,12 @@ package partC.day17;
 public class AI implements Thinkable{
 	
 	protected char op;
+
+	//부모 인터페이스의 추상메소도 정의하기
+	@Override
+	public String beAble() {
+		return "Thinkable";
+	}
 	
 	@Override
 	public int calculate(int a, int b) {
@@ -21,7 +27,8 @@ public class AI implements Thinkable{
 			result=a/b;
 			break;
 		default:
-			throw new IllegalArgumentException("Unexpected value: " + op);
+			result= a+b;
+			//	throw new IllegalArgumentException("Unexpected value: " + op);
 		}
 		return result;
 	}
@@ -31,4 +38,6 @@ public class AI implements Thinkable{
 		System.out.println("학습된 정보를 수집해서 알려드립니다.");
 		
 	}
+
+	
 }

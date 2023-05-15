@@ -1,6 +1,12 @@
 package partC.day17;
 
 public class Human implements Thinkable, Cookable, Runnable{
+	//부모 인터페이스의 추상메소도 정의하기
+	@Override
+	public String beAble() {
+		return "Thinkable, Cookable, Runnable";
+	}
+	
 	//Runnable
 	@Override
 	public String run(int speed) {
@@ -18,7 +24,7 @@ public class Human implements Thinkable, Cookable, Runnable{
 	}
 	@Override
 	public int calculate(int a, int b) {
-		if(a>=99999 && b>99999){
+		if(a>=99999 && b>=99999){
 			System.out.println("사람이 암산으로 덧셈 할 수 없는 값입니다.");
 			return -99999999;
 		}else {

@@ -28,7 +28,8 @@ public class AI implements Thinkable{
 			break;
 		default:
 			result= a+b;
-			//	throw new IllegalArgumentException("Unexpected value: " + op);
+			//잘못된 op필드값은 오류를 발생. op 필드 초기값? ' ' 입니다.
+			//throw new IllegalArgumentException("Unexpected value: " + op);
 		}
 		return result;
 	}

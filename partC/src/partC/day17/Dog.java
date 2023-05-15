@@ -22,4 +22,6 @@ public class Dog implements Runnable{
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	
 }

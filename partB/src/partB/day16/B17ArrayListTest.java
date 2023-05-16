@@ -4,7 +4,7 @@ import java.util.ArrayList;		//자바에서 제공하는 자료구조 클래스
 
 //새로운 자료구조 ArrayList 연습합니다. 배열과 동작방식이 유사한 List 자료구조 중 하나입니다.
 // 자료구조? 데이터를 저장하고 다루는 방식.(List, Set, Map)
-// ArrayList<E> : <E> 제너릭 타입. 리스트에서 다룰 데이터의 클래스 타입을 지정.
+// ArrayList<E> : <E> 에서 E는 Element 약자, <> 제너릭 타입 기호. 리스트에서 다룰 데이터의 클래스 타입을 지정.
 //				  기본형 타입 int,long,char.... 는 Wrapper 클래스를 사용합니다.
 //				Integer.valueOf(19) 는 int 19를 Integer 객체(필드값은 19)로 변환
 //				remove 외에 일반적인 경우에는 Integer와 int는 자동캐스팅이 됩니다.

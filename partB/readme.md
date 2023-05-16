@@ -117,12 +117,18 @@ sh instanceof Circle 결과가 참일 때만 Circle 로 다운캐스팅 합니�
   
 <hr/>
 
+#### Animal.java
++ 필드 타입과 인스턴스 메소드 인자가 Object 클래스인 예시
++ 인스턴스 메소드 iamAnimal 은 Object 인자의 타입을 검사하여 그에 맞는 다운캐스팅과 메소드 실행을 합니다.
+
 #### B16ObjectTypeTest.java
++ Animal 클래스의 iamAnimal 메소드 테스트
   
 #### solution 패키지 
-  + Product 추상클래스를 이용한 복습 문제
++ Product 추상클래스를 이용한 복습 문제
   
 #### B17ArrayListTest.java
++ 배열과 ArrayList 자료구조의 비교
 
 
 

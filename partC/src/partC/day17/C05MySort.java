@@ -26,6 +26,20 @@ public class C05MySort {
 				//i=4		, k=5 ~ 5 까지
 				
 				System.out.println("최종 결과 :" +Arrays.toString(nums));
+				
+				String[] names = {"momo","nana","zuwi","cat","dog","kiwi"};
+				//위와 같은 동일한 선택 정렬 알고리즘으로 names 배열을 정렬해보세요.
+				//힌트: 문자열 비교 조건연산은 comparTo로 해야 합니다.
+				for(int i = 0; i < names.length-1; i++) {	//마지막 i = nums.length-2
+					for(int k =i+1; k < names.length; k++) {   //k는 i 보다 뒤에 있는 인덱스
+						if(names[i].compareTo(names[k]) > 0) {		// 인덱스 i와 k 위치의 값을 *교환하기
+							String temp = names[i];
+							names[i] = names[k];
+							names[k] = temp;
+						}
+					}
+					System.out.println("중간 과정" + (i+1) + "단계 :" +Arrays.toString(names));
+				}
 
 	}
 

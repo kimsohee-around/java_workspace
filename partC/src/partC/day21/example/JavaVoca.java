@@ -16,15 +16,13 @@ public class JavaVoca {			//자바프로그래밍에 쓰이는 영어단어 1개
 							this.korean = korean;
 							this.level = level;
 	}
-
 	//getter, setter 정의
-	
 	public void setLevel(String level) {  //사용자는 메뉴 선택 1,2,3 선택하고 그 값에 따라 level 문자열을 새로 정하기
 		this.level = switch(level) {		//자바 12부터 가능
 			case "1" -> "Beginner";
 			case "2" -> "Intermediate";
 			case "3" -> "Advanced";
-			default -> throw new IllegalArgumentException("Unexpected value: " + level);
+			default -> throw new IllegalArgumentException("Unexpected (value = 1 or 2 or 3) :  " + level);
 		};
 	}
 	

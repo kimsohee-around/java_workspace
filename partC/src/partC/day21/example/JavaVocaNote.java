@@ -12,10 +12,15 @@ import java.util.TreeMap;
 public class JavaVocaNote implements VocaNoteBook{
 
 	//파일에서 읽어온 데이터를 저장할 자료구조 필요합니다.
-	Map<String,JavaVoca> voca;		//String은 영어단어, JavaVoca 객체(영어단어,한글뜻,레벨)
+	private Map<String,JavaVoca> voca;		//String은 영어단어, JavaVoca 객체(영어단어,한글뜻,레벨)
 	
 	public JavaVocaNote() {
 		voca = new TreeMap<>();				//데이터 저장할 map 객체 생성
+	}
+	
+	@Override
+	public Map<String, JavaVoca> getVoca() {		//voca 필드의 getter
+		return voca;
 	}
 	
 	@Override
@@ -59,16 +64,12 @@ public class JavaVocaNote implements VocaNoteBook{
 	
 	
 	@Override
-	public void add(JavaVoca voca) {
-		// TODO Auto-generated method stub
-		
+	public void add(JavaVoca vo) {
+		// 구현해보세요.
+		voca.put(vo.getEnglish(), vo);
 	}
 
-	@Override
-	public Map<String, JavaVoca> getVoca() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	
 	@Override

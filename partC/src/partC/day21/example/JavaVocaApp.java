@@ -33,8 +33,17 @@ public class JavaVocaApp {
 					korean = sc.nextLine();
 					System.out.print("그룹(1:기초,2:중급,3:고급) ✏ ");
 					level = sc.nextLine();
+					//add()메소드 실행하기
+					JavaVoca v = new JavaVoca(english, korean, level);   
+					v.setLevel(level);  //level 1,2,3 입력 받은 것을 해당 문자열로 변환하기
+					myNote.add(v);
 					break;
 				case "s":
+					System.out.print("찾을 자바 단어 입력 ✏ ");
+					english = sc.nextLine(); 
+					JavaVoca s = myNote.getVoca().get(english);	//???????
+					if(s==null) System.out.println("찾는 단어가 없습니다.");
+					else System.out.println("단어를 찾았습니다. => " + s);
 					break;
 				case "g":
 					break;

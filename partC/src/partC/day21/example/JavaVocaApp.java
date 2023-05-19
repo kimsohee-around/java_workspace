@@ -1,5 +1,6 @@
 package partC.day21.example;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class JavaVocaApp {
@@ -46,6 +47,11 @@ public class JavaVocaApp {
 					else System.out.println("단어를 찾았습니다. => " + s);
 					break;
 				case "g":
+					System.out.print("검색할 레벨(1:기초,2:중급,3:고급) ✏ ");					
+					level = sc.nextLine();			//1,2,3 중 하나를 입력 
+					List<JavaVoca> results = myNote.group(level);
+					System.out.println("검색 결과 개수 ==>" +  results.size());
+					System.out.println(results);
 					break;
 				case "a":
 					//화면에 모두 출력 메소드 호출

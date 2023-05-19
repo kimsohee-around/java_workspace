@@ -2,6 +2,7 @@ package partC.day21.example;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -69,16 +70,25 @@ public class JavaVocaNote implements VocaNoteBook{
 		voca.put(vo.getEnglish(), vo);
 	}
 
-	
-
-	
 	@Override
-	public List<JavaVoca> group(String group) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<JavaVoca> group(String level) {		//그룹 검색 메소드
+		List<JavaVoca> result = new ArrayList<>();
+		// 그룹 검색은 key 값만으로 안되고 하나씩 검사과정이 필요합니다.
+		level = switch(level) {		//자바 12부터 가능
+			case "1" -> "Beginner";
+			case "2" -> "Intermediate";
+			case "3" -> "Advanced";
+			default -> throw new IllegalArgumentException("Unexpected (value = 1 or 2 or 3) :  " + level);
+		};
+		
+		for(String key : voca.keySet()) {
+			JavaVoca vo = voca.get(key);
+			if(vo.getLevel().equals(level))
+						result.add(vo);
+		}
+		
+		return result;
 	}
-
-	
 
 	@Override
 	public void save(String path) {

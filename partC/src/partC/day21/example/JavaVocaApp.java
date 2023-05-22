@@ -73,6 +73,7 @@ public class JavaVocaApp {
 					break;
 				case "e":
 					//프로그램이 종료될 때 , 단어장 파일을 갱신(update)하기 : Map에 저장된 데이터를 파일로 저장하기
+					path = "D:\\iclass0419\\sample.txt";
 					myNote.save(path);
 					run=false;		//종료조건
 					break;

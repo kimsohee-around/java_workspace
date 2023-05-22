@@ -2,7 +2,9 @@ package partC.day21.example;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -39,6 +41,7 @@ public class JavaVocaNote implements VocaNoteBook{
 				String name = stk.nextToken();
 				voca.put(name, new JavaVoca(name, stk.nextToken(), stk.nextToken()));
 			}
+			System.out.println("단어 " +  voca.size() +" 개를 읽어왔습니다.");  //파일->Map에 저장
 			System.out.println("정상적으로 단어장 파일 읽어오기 끝!!");
 
 		}catch (FileNotFoundException e) {
@@ -91,8 +94,28 @@ public class JavaVocaNote implements VocaNoteBook{
 	}
 
 	@Override
-	public void save(String path) {
-		// TODO Auto-generated method stub
+	public void save(String path) {	//Map 에 있는 데이터를 파일로 저장하기
+		File file = new File(path);
+		PrintWriter pw = null;
+		try {
+			pw = new PrintWriter(file);
+	//		pw.println(voca);		//출력 테스트용
+	//Map 데이터 1개를 1줄로 출력하기: Map 데이터 1개식 가져오기는 iterator 또는 향상 for 사용
+			Iterator<String> iterator = voca.keySet().iterator();
+			while(iterator.hasNext()) {
+				String key = iterator.next();    //Map의 key
+				JavaVoca vo = voca.get(key);	 //key 로 가져온 value
+				pw.println(vo);		//JavaVoca의 toString 리턴 문자열로 출력하니 확인해보세요.!!
+			}
+			System.out.println("단어 " +  voca.size() +" 개를 파일에 저장했습니다.");  //Map->파일에 저장
+			System.out.println("정상적으로 단어장 파일 저장하기 끝!!");
+		}catch (Exception e) {
+			System.out.println("파일에 저장하기 - 출력 예외 : " + e.getMessage());
+		}finally {
+			if(pw !=null) pw.close();
+		}
+		
+		
 		
 	}
 

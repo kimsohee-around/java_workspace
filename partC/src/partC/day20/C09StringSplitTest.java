@@ -51,7 +51,7 @@ public class C09StringSplitTest {
 		System.out.println("\3. 기준문자열(delimiter) 가 공백이 아닐 떄");
 //		temp = "모모xy90xy88xy79xy33";		//1)
 		temp = "모모xy90xy88xy79xy33y999x1111";	//2) 
-		stk = new StringTokenizer(temp,"xy");	//2) 에서, 토큰 갯수 7. "xy"정규식 표현
+		stk = new StringTokenizer(temp,"xy");	//2) 에서, 토큰 갯수 7. "xy"정규식 표현("x"또는"y")
 		count =0;
 		while (stk.hasMoreTokens()) {
 			System.out.println("count=" + count++ + ",다음 토큰 값 = " + stk.nextToken());

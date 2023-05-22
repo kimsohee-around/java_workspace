@@ -31,6 +31,14 @@ public static void main(String[] args) {
 		case "n": 
 			System.out.print("이름 입력 ✏ ");
 			name = sc.nextLine(); 
+			Customer temp = myCustomer.getCustomer().get(name);  //value 가져오기
+			if(temp !=null) {
+				System.out.print("해당 고객이 주소록에 존재합니다.수정하시겠습니까?");
+				if(sc.nextLine().equals("n")) {
+					System.out.println("새로운 사용자 등록을 취소합니다.");
+					continue;    //while문 시작지점으로 돌아가기
+				}
+			}
 			System.out.print("주소 입력 ✏ ");
 			address = sc.nextLine();
 			System.out.print("그룹(1:일반고객,2:직원,3:VIP ✏ ");					

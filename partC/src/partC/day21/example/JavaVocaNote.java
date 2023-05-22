@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -18,7 +20,9 @@ public class JavaVocaNote implements VocaNoteBook{
 	private Map<String,JavaVoca> voca;		//String은 영어단어, JavaVoca 객체(영어단어,한글뜻,레벨)
 	
 	public JavaVocaNote() {
-		voca = new TreeMap<>();				//데이터 저장할 map 객체 생성
+//		voca = new HashMap<>();
+//		voca = new TreeMap<>();				//데이터 저장할 map 객체 생성
+		voca = new LinkedHashMap<>();
 	}
 	
 	@Override

@@ -20,13 +20,27 @@ public class JavaVocaApp {
 		//1.프로그램을 시작하면 저장된 단어들을 파일에서 읽어옵니다.
 		myNote.load(path);
 		
-		System.out.println("선택 기능 👉 [n]새 단어 저장 [s]단어 찾기 [g]그룹선택 보기   [a]전체보기 [e]프로그램 끝내기");
 		
 		while (run) { 
+			System.out.println("선택 기능 👉 [n]새 단어 저장 [s]단어 찾기 [g]그룹선택 보기  [d] 삭제   [a]전체보기  [e]프로그램 끝내기");
 			System.out.print("선택 ✏ ->");
 			sel = sc.nextLine();
 			
 			switch (sel) {
+				case "d":
+					System.out.println("삭제할 단어를 입력해 주세요");
+					english = sc.nextLine();
+					
+					JavaVoca d = myNote.remove(english);
+					if(d==null) {
+						System.out.println("단어장에 없는 단어이거나 삭제가 취소 되었습니다.");
+					}else {
+						System.out.println("단어 =>" + d + " 를 삭제하였습니다.");
+					}
+					
+					
+					break;
+			
 				case "n": 
 					System.out.print("단어 입력 ✏ ");
 					english = sc.nextLine(); 
@@ -58,6 +72,8 @@ public class JavaVocaApp {
 					myNote.print();
 					break;
 				case "e":
+					//프로그램이 종료될 때 , 단어장 파일을 갱신(update)하기 : Map에 저장된 데이터를 파일로 저장하기
+					myNote.save(path);
 					run=false;		//종료조건
 					break;
 			}	

@@ -96,4 +96,26 @@ public class JavaVocaNote implements VocaNoteBook{
 		
 	}
 
+	@Override
+	public JavaVoca remove(String key) {
+		Scanner sc = new Scanner(System.in);
+		JavaVoca d = voca.get(key);		//key에 해당하는 value 가져오기
+		if (d == null) {
+			System.out.println("찾는 단어가 없습니다.");
+		}else {
+			System.out.println("단어를 찾았습니다. => " + d);
+			
+			System.out.println("정말 삭제하시겠습니까? Y/N?");
+			String y = sc.nextLine();
+			
+			if (y.equals("y")) 
+				d = voca.remove(key);
+		}
+		
+//		sc.close();		//표준입력 자원 해제: main에서 표준입력 못합니다.
+//		결론 : 가급적 객체로 생성되는 클래스의 메소드에서는 키보드 입력과 같은 코드는
+//			  작성하지 않고 main으로 넘깁니다.		
+		return d;
+	}
+
 }

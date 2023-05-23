@@ -65,7 +65,8 @@ public class CustomerNote implements CustomerAddressBook {
 		case "2" -> "직원";
 		case "3" -> "VIP";
 		default -> throw new IllegalArgumentException("Unexpected (value = 1 or 2 or 3) :  " + level);
-		
+							//잘못된 인자값으로 발생되는 예외. 이런경우는 예외로 분류해서 처리하고 싶을 때 사용하면 됩니다.
+		//default -> "";   //throw와 비교해 보세요.
 		};
 		
 		for(String key : customer.keySet()) {
@@ -84,7 +85,7 @@ public class CustomerNote implements CustomerAddressBook {
 
 
 	@Override
-	public void save(String path) {
+	public void save(String path)  {
 		File file = new File(path);
 		PrintWriter pw = null;
 		try {
@@ -93,11 +94,11 @@ public class CustomerNote implements CustomerAddressBook {
 			while (iterator.hasNext()) {
 				String key = iterator.next();
 				Customer cm = customer.get(key);
-				pw.println(cm);
+				pw.println(cm);   //cm.toString() 재정의한 문자열 리턴.(재정의 없다.했을때, 패키징명.클래스명@해시코드)
 			}
 			System.out.println("이름 "+customer.size() + "개를 파일에 저장하였습니다." );
 			System.out.println("정상적으로 주소록 파일 저장하기 끝");
-		} catch (Exception e) {
+		} catch (FileNotFoundException e) {
 			System.out.println("파일에 저장하기 - 출력 예외 : "+ e.getMessage());
 			
 		}finally {

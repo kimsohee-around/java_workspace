@@ -42,15 +42,19 @@ public class C19EqualsNHashcode {
 		//EqualsAndHashCode 재정의 없는 클래스
 		Customer c1 = new Customer("jenny","이제니",22);
 		Customer c2 = new Customer("jenny","이제니",22);
-		System.out.println("Customer 동일성 = " +(c1.hashCode()==c2.hashCode()));
-		System.out.println("Customer 동등성 = " + c1.equals(c2));
+		System.out.println("Customer 동일성 = " +(c1.hashCode()==c2.hashCode()));  //false
+		System.out.println("Customer 동등성 = " + c1.equals(c2));		//false
 		
 		//EqualsAndHashCode 재정의 한 클래스		
 		CustomerENH cs1 = new CustomerENH("jenny","이제니",22);
 		CustomerENH cs2 = new CustomerENH("jenny","이제니",22);
-		System.out.println("CustomerENH 동일성 = " +(cs1.hashCode()==cs2.hashCode()));
-		System.out.println("CustomerENH 동등성 = " + cs1.equals(cs2));
-		System.out.println(cs1==cs2);
+		System.out.println("CustomerENH 동일성 = " +(cs1.hashCode()==cs2.hashCode())); //true
+		System.out.println("CustomerENH 동등성 = " + cs1.equals(cs2));		//true
+		
+		System.out.println("\n참고");
+		System.out.println(cs1==cs2);		//false
+		System.out.println(cs1.toString()==cs2.toString());  //false		
+		//toString으로 새로 만들어진 문자열 객체의 비교 입니다. 
 		 
 	}
 

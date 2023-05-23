@@ -2,8 +2,8 @@ package partC.day20;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -29,7 +29,8 @@ public class CollectionExampleTest {
 		
 		//Set 은 데이터 저장에 순서가 없다. 동일한 값을 중복하여 저장할 수 없다.
 		System.out.println("\n2. Set");
-		Set<String> set = new HashSet<>();
+//		Set<String> set = new HashSet<>();   //HashSet 을 LinkedHashSet 으로 변경해서 차이점을 보세요.
+		Set<String> set = new LinkedHashSet<>(); 	//데이터가 추가되는 순서를 표현할 수 있습니다. (자세한 것은 내일)
 		set.add("트와이스");
 		set.add("뉴진스");
 		set.add("에스파");

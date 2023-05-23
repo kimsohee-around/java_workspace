@@ -20,8 +20,9 @@ public class JavaVocaNote implements VocaNoteBook{
 	private Map<String,JavaVoca> voca;		//String은 영어단어, JavaVoca 객체(영어단어,한글뜻,레벨)
 	
 	public JavaVocaNote() {
+		//데이터를 1개씩 map 에 추가 할때 어떤 방식으로 저장할 것이냐?
 //		voca = new HashMap<>();
-//		voca = new TreeMap<>();				//데이터 저장할 map 객체 생성
+//		voca = new TreeMap<>();				
 		voca = new LinkedHashMap<>();
 	}
 	

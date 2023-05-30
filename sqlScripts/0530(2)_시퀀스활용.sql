@@ -30,15 +30,15 @@ VALUES (tblbuy_seq.nextval, 'mina012' , 'CJBAb12g' , 5,to_date('2022-03-10 14:33
 INSERT INTO TBL_BUY 
 VALUES (tblbuy_seq.nextval, 'mina012' , 'APLE5kg' , 2,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
 INSERT INTO TBL_BUY 
-VALUES (tblbuy_seq.nextval, 'mina012' , 'JINRMn5' , 2,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+VALUES (tblbuy_seq.nextval, 'mina012' , 'JINRMn5' , 2,to_date('2022-03-16 10:13:15','yyyy-mm-dd hh24:mi:ss'));
 INSERT INTO TBL_BUY 
-VALUES (tblbuy_seq.nextval, 'twice' , 'JINRMn5' , 3 ,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+VALUES (tblbuy_seq.nextval, 'twice' , 'JINRMn5' , 3 ,to_date('2021-12-25 19:32:15','yyyy-mm-dd hh24:mi:ss'));
 INSERT INTO TBL_BUY 
-VALUES (tblbuy_seq.nextval, 'twice' , 'MANGOTK4r' , 2 ,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+VALUES (tblbuy_seq.nextval, 'twice' , 'MANGOTK4r' , 2 ,to_date('2021-12-25 19:32:15','yyyy-mm-dd hh24:mi:ss'));
 INSERT INTO TBL_BUY 
-VALUES (tblbuy_seq.nextval, 'hongGD' , 'DOWON123a' , 1 ,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+VALUES (tblbuy_seq.nextval, 'hongGD' , 'DOWON123a' , 1 ,to_date('2021-10-21 11:13:25','yyyy-mm-dd hh24:mi:ss'));
 INSERT INTO TBL_BUY 
-VALUES (tblbuy_seq.nextval,  'hongGD' , 'APLE5kg' , 1 ,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));		
+VALUES (tblbuy_seq.nextval,  'hongGD' , 'APLE5kg' , 1 ,to_date('2021-10-21 11:13:25','yyyy-mm-dd hh24:mi:ss'));		
 
 SELECT *
 FROM tbl_buy;

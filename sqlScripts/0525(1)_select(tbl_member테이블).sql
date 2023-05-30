@@ -8,7 +8,12 @@ CREATE TABLE tbl_member (
 );
 
 -- 예제 데이터
-INSERT INTO TBL_MEMBER VALUES (1,'김모모','momo@naver.com','2022-11-24');
+INSERT INTO 
+	TBL_MEMBER			-- 컬럼명 모두 생략된 경우 
+VALUES 
+	(1,'김모모','momo@naver.com','2022-11-24');
+
+
 INSERT INTO TBL_MEMBER VALUES (2,'박나연','parkny@gmail.com','2022-10-24');
 INSERT INTO TBL_MEMBER VALUES (3,'최슬기','slgichoi@naver.com','2021-09-24');
 INSERT INTO TBL_MEMBER VALUES (4,'박사나','san@gmail.com','2022-10-05');
@@ -16,7 +21,11 @@ INSERT INTO TBL_MEMBER VALUES (5,'이나연','nayeon@gmail.com','2020-10-05');
 INSERT INTO TBL_MEMBER VALUES (6,'강나현','nahyeon@gmail.com','2021-05-05');
 INSERT INTO TBL_MEMBER VALUES (7,'나쯔위','na1234@gmail.com','2021-05-05');
 INSERT INTO TBL_MEMBER(MNO,NAME,JOIN_DATE) VALUES (8,'강감찬','2020-05-05');
-INSERT INTO TBL_MEMBER(MNO,NAME,JOIN_DATE) VALUES (9,'이순신','2020-05-05');
+
+INSERT INTO 
+	TBL_MEMBER(MNO,NAME,JOIN_DATE) 
+VALUES 
+	(9,'이순신','2020-05-05');
 
 -- DML: 2. SELECT 는 데이터 조회 (모든 행 , 특정 조건의 행, 모든 열, 지정된 열)
 --		select 조회할 열 from 테이블 이름 [where]특정 행을 조회할 조건 [order by] 정렬할 컬럼
@@ -65,7 +74,18 @@ SELECT * FROM TBL_MEMBER tm WHERE MNO IN (1,2,5,7);
 
 -- mno 값이 3~6 인 것 조회  : between (AND 연산)
 SELECT * FROM TBL_MEMBER tm WHERE mno >= 3 AND MNO <= 6;
-SELECT * FROM TBL_MEMBER tm WHERE MNO BETWEEN 3 AND 6;
+
+
+SELECT 
+	*		-- 조회할 컬럼 지정. *는 모든 컬럼
+FROM 
+	TBL_MEMBER tm 
+WHERE 
+	MNO BETWEEN 3 AND 6			-- 조회할 행 조건식
+ORDER BY 
+--	NAME  
+	JOIN_DATE DESC 				-- 최근날짜가 먼저
+;
 
 
 -- select 앞으로 중요한 것 join 연산. 테이블 2개 이상을 조건식으로 하나로 합하는 연산.

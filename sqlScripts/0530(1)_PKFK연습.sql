@@ -36,12 +36,22 @@ CREATE TABLE tbl_product(
 	pname varchar2(40) NOT NULL,
 	price number(9) NOT NULL 
 );
-
+-- 참고로 code 는 상품명 , 회사명, 강사명 등 중복될 수 있는 데이터를 식별하기 위해 부여하는 임의의 체계있는 값입니다.
+INSERT INTO TBL_PRODUCT tp 
+VALUES ('DOWON123a', 'B2', '동원참치선물세트', 54000);
+INSERT INTO TBL_PRODUCT tp 
+VALUES ('CJBAb12g', 'B1', '햇반 12개입', 14500);
+INSERT INTO TBL_PRODUCT tp 
+VALUES ('JINRMn5', 'B1', '진라면 5개입', 6350);
+INSERT INTO TBL_PRODUCT tp 
+VALUES ('APLE5kg', 'A1', '청송사과 5kg', 66000);
+INSERT INTO TBL_PRODUCT tp 
+VALUES ('MANGOTK4r', 'A2', '애플망고 1kg', 32000);
 
 
 -- 구매 테이블 : 어느 고객이 무슨 상품을 구입하는가? 고유ID 또는 상품코드로 기본키를 만들 수 있을까요? -> 없습니다. 
 CREATE TABLE tbl_buy(
-	buy_seq number(8) PRIMARY KEY ,		-- 구매 번호
+	buy_seq number(8) PRIMARY KEY ,		-- 구매 번호(순차적으로 부여하는 식별값)
 	customId varchar2(20) NOT NULL ,			-- 참조테이블 컬럼명과 다르게 할수 있습니다.
 	pcode varchar2(20) NOT NULL ,
 	quantity number(5) DEFAULT 1 ,		--수량
@@ -52,6 +62,20 @@ CREATE TABLE tbl_buy(
 			REFERENCES tbl_product(pcode)
 );
 
+INSERT INTO TBL_BUY 
+VALUES (1, 'mina012' , 'CJBAb12g' , 5,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+INSERT INTO TBL_BUY 
+VALUES (2, 'mina012' , 'APLE5kg' , 2,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+INSERT INTO TBL_BUY 
+VALUES (3, 'mina012' , 'JINRMn5' , 2,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+INSERT INTO TBL_BUY 
+VALUES (4, 'twice' , 'JINRMn5' , 3 ,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+INSERT INTO TBL_BUY 
+VALUES (5, 'twice' , 'MANGOTK4r' , 2 ,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+INSERT INTO TBL_BUY 
+VALUES (6, 'hongGD' , 'DOWON123a' , 1 ,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
+INSERT INTO TBL_BUY 
+VALUES (7,  'hongGD' , 'APLE5kg' , 1 ,to_date('2022-03-10 14:33:15','yyyy-mm-dd hh24:mi:ss'));
 
 
 

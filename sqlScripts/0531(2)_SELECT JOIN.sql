@@ -44,6 +44,50 @@ WHERE
 	tb.CUSTOMID = 'twice';
 
 -- 7)' 진라면 상품 코드 'JINRMn5' 를 구입한 __회원이름과 이메일__을 조회하세요.
+-- 형식 1
+SELECT 
+	name,email
+FROM 
+	TBL_BUY tb ,
+	TBL_CUSTOM tc 
+WHERE 
+	tb.CUSTOMID = tc.CUSTOM_ID 
+AND 
+	tb.PCODE ='JINRMn5'
+	;
+
+
+-- 형식 2
+SELECT 
+	NAME ,EMAIL 
+FROM 
+	TBL_BUY tb 
+JOIN
+	TBL_CUSTOM tc 
+ON
+	tb.CUSTOMID =tc.CUSTOM_ID 			-- 내부 조인 , 동등(equal) 조인
+AND 	
+	tb.PCODE ='JINRMn5'
+ORDER BY 
+	tb.BUY_DATE DESC ;
+
+-- 참고 : 조인 조건식이 없다면???
+SELECT * FROM TBL_BUY tb , TBL_PRODUCT tp ;			-- 크로스 조인 (가능한 조합으로 합치기)
+
+SELECT * FROM TBL_CUSTOM tc  , TBL_PRODUCT tp ;
+
+SELECT * FROM TBL_BUY tb JOIN TBL_PRODUCT tp ;		-- 오류 : ON 조건식 반드시 있어야 합니다.
+
+-- 외부 조인
+
+
+
+
+
+
+
+
+
 
 
 

@@ -79,17 +79,66 @@ SELECT * FROM TBL_CUSTOM tc  , TBL_PRODUCT tp ;
 SELECT * FROM TBL_BUY tb JOIN TBL_PRODUCT tp ;		-- 오류 : ON 조건식 반드시 있어야 합니다.
 
 -- 외부 조인
+-- 외부 조인 테스트를 위해 새로운 상품 입력하기
+INSERT INTO 
+	TBL_PRODUCT tp 
+VALUES
+	('3MCRY','B1','오뚜기 3분카레',2300);
+
+SELECT * FROM TBL_BUY tb ;
+SELECT * FROM TBL_CUSTOM tc  ;
+SELECT * FROM TBL_PRODUCT tp  ;
+
+-- 내부 동등 조인을 했을 때 , 
+-- 조인 결과행에 없는 회원ID 있나요? 구매하지를 하지 않은 고객 wonder 없습니다.
+-- 조인 결과행에 없는 pcode 있나요? 판매되지 않은 상품 3MCRY 없습니다.
+
+SELECT 
+	*
+FROM TBL_PRODUCT tp					-- tp는 테이블이름 줄여서 쓴 별칭
+JOIN TBL_BUY tb 					-- tb          "
+ON 
+	tp.PCODE = tb.PCODE ;
+
+-- 상품 테이블에 대해 외부 조인
+SELECT 
+	*
+FROM TBL_PRODUCT tp					-- tp는 테이블이름 줄여서 쓴 별칭
+LEFT								-- 외부 조인을 위해 LEFT OUTER 키워드 추가 : 상품에는 있고 구매에는 없는 pcode 포함
+	OUTER
+	JOIN TBL_BUY tb 					-- tb          "
+ON 
+	tp.PCODE = tb.PCODE ;			-- 동등 하다. tb.pcode 가 NULL 인것도 포함.
+-- 고객 테이블에 대해 외부 조인
+SELECT 
+	*
+FROM TBL_CUSTOM tc 					-- tp는 테이블이름 줄여서 쓴 별칭
+LEFT								-- 외부 조인을 위해 LEFT OUTER 키워드 추가 : 고객에는 있고 구매에는 없는 회원ID포함
+	OUTER
+	JOIN TBL_BUY tb 					-- tb          "
+ON 
+	tc.CUSTOM_ID = tb.CUSTOMID  ;
 
 
+-- 10-1) 우리 매장에서 상품을 구매한 회원ID를 조회하세요.
+SELECT DISTINCT 
+	tc.CUSTOM_ID 
+FROM TBL_CUSTOM tc 
+LEFT
+JOIN TBL_BUY tb 
+ON tc.CUSTOM_ID =tb.CUSTOMID 		-- 조인 후에
+WHERE								-- 조건식 검사. 외부 조인에서는 WHERE 사용합니다.
+   tb.PCODE IS NOT NULL;			-- 10-2)
 
-
-
-
-
-
-
-
-
+-- 또는 10-2)우리매장에 한번도 상품을 구매하지 않은 회원ID조회
+SELECT 
+	tc.CUSTOM_ID 
+FROM TBL_CUSTOM tc 
+LEFT
+JOIN TBL_BUY tb 
+ON tc.CUSTOM_ID = tb.CUSTOMID 
+WHERE 
+	tb.PCODE IS NULL;
 
 
 

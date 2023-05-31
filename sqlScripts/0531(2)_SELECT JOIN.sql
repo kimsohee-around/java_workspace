@@ -120,7 +120,7 @@ ON
 	tc.CUSTOM_ID = tb.CUSTOMID  ;
 
 
--- 10-1) 우리 매장에서 상품을 구매한 회원ID를 조회하세요.
+-- 10-1) 우리 매장에서 상품을 구매한 회원ID를 조회하세요.조인 없이 할수 있으나 10-2) 와 비교를 위해서 했습니다.
 SELECT DISTINCT 
 	tc.CUSTOM_ID 
 FROM TBL_CUSTOM tc 
@@ -128,7 +128,7 @@ LEFT
 JOIN TBL_BUY tb 
 ON tc.CUSTOM_ID =tb.CUSTOMID 		-- 조인 후에
 WHERE								-- 조건식 검사. 외부 조인에서는 WHERE 사용합니다.
-   tb.PCODE IS NOT NULL;			-- 10-2)
+   tb.PCODE IS NOT NULL;			
 
 -- 또는 10-2)우리매장에 한번도 상품을 구매하지 않은 회원ID조회
 SELECT 
@@ -139,6 +139,14 @@ JOIN TBL_BUY tb
 ON tc.CUSTOM_ID = tb.CUSTOMID 
 WHERE 
 	tb.PCODE IS NULL;
+
+-- 참고 : 오라클에서 외부조인 표기 다른 방법이 있습니다.
+SELECT * 
+FROM TBL_PRODUCT tp , TBL_BUY tb 
+WHERE tp.PCODE = tb.PCODE(+) ;		-- 상품 테이블 쪽으로 구매 결합(+)
+
+
+
 
 
 

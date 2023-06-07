@@ -39,6 +39,7 @@ SELECT * FROM tbl_test#;
 오라클이 만들어 준 이름의 제약조건은 이미 있는 제약조건을 동일하게 쓰면 오류가 생깁니다.
 --> alter table ~ modify 로 제약조건 설정은 컬럼 레벨. 주의해서 사용하기.
 */
+-- 컬럼레벨. 제약조건 이름 정의하기
 CREATE TABLE tbl_test2# (
 	tid varchar2(3) constraint tid_pk primary key,
 	tname varchar2(10) constraint tname_notnull NOT NULL,
@@ -46,18 +47,14 @@ CREATE TABLE tbl_test2# (
 	tno number(3)
 );
 
+-- drop table tbl_test2#;
 
-drop table tbl_test2#;
-
-
+-- 컬럼레벨. 
 create table tbl_test3# (
-    test varchar2(20) not null,
+    test varchar2(20) not null,		-- 제약조건 이름 오라클이 정합니다.
     tid varchar2(3) constraint tid_fk
-                REFERENCES tbl_test2#(tid)   -- FOREIGN 안씁니다.
+                REFERENCES tbl_test2#(tid)   -- FOREIGN KEY 안씁니다.
 );
-
-
-
 -- 테이블 컬럼 데이터 형식 변경 : modify
 -- tid 의 길이를 20으로 변경하기
 ALTER TABLE tbl_test# MODIFY (tid varchar2(20) NOT NULL);  

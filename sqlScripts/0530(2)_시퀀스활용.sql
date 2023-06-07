@@ -22,6 +22,7 @@ FROM dual;				-- 단, 처음 1번은 먼저 nextval을 꼭 실행해야 currval 
 CREATE SEQUENCE tblbuy_seq
 		START WITH 1001;		-- 시작값 지정
 
+DROP SEQUENCE tblbuy_seq;  --  필요시 삭제 후 다시 생성
 -- 2) tbl_buy 의 데이터 모두 제거하기
 TRUNCATE TABLE tbl_buy;		
 -- 3) 7개의 insert 를 시퀀스로 하기

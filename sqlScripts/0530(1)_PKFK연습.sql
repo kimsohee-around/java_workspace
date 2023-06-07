@@ -27,7 +27,6 @@ VALUES ( 'twice', '박모모', 'momo@daum.net', 29, to_date('2021-12-25 19:23:45
 INSERT INTO tbl_custom (custom_id,name,email)
 VALUES ( 'wonder', '이나나', 'lee@naver.com');
 
-
 -- 상품 테이블 : 
 
 CREATE TABLE tbl_product(
